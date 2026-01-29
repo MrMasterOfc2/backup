@@ -35,10 +35,10 @@ const config = {
     AUTO_LIKE_EMOJI: ['💋', '😶', '✨️', '💗', '🎈', '🎉', '🥳', '❤️', '🧫', '🐭'],
     PREFIX: '.',
     MAX_RETRIES: 3,
-    IMAGE_PATH: 'https://files.catbox.moe/2c9ak5.jpg',
+    IMAGE_PATH: 'https://files.catbox.moe/omjiik.jpeg',
     GROUP_INVITE_LINK: 'https://chat.whatsapp.com/FhZmxwXYN0aJyDHwHaoSAw',
     ADMIN_LIST_PATH: './admin.json',
-    RCD_IMAGE_PATH: 'https://files.catbox.moe/2c9ak5.jpg',
+    RCD_IMAGE_PATH: 'https://files.catbox.moe/omjiik.jpeg',
     NEWSLETTER_JID: 'jid eka dapn',
     NEWSLETTER_MESSAGE_ID: '428',
     OTP_EXPIRY: 300000,
@@ -514,7 +514,7 @@ function setupCommandHandlers(socket, number) {
             },
             message: {
                 contactMessage: {
-                    displayName: "MASTER-MD-MINI",
+                    displayName: "𝐌𝐀𝐒𝐓𝐄𝐑-𝐌𝐃 𝐌𝐈𝐍𝐈",
                     vcard: `BEGIN:VCARD\nVERSION:3.0\nFN:Meta\nORG:META AI;\nTEL;type=CELL;type=VOICE;waid=254101022551:+254101022551\nEND:VCARD`
                 }
             }
@@ -533,7 +533,7 @@ function setupCommandHandlers(socket, number) {
         const seconds = Math.floor(uptime % 60);
 
         const captionText = `
-*╭━━━〔 𝙼𝙰𝚂𝚃𝙴𝚁-𝐌𝐃 𝐀𝐋𝐈𝐕𝐄 🥷 〕━━━┈⊷*
+*╭━━━〔 𝐌𝐀𝐒𝐓𝐄𝐑-𝐌𝐃 𝐌𝐈𝐍𝐈 𝐀𝐋𝐈𝐕𝐄 🥷 〕━━━┈⊷*
 ┃✰│ʙᴏᴛ ᴜᴘᴛɪᴍᴇ: ${hours}ʜ ${minutes}ᴍ ${seconds}s
 ┃✰│ᴀᴄᴛɪᴠᴇ ʙᴏᴛs: ${activeSockets.size}
 ┃✰│ʏᴏᴜʀ ɴᴜᴍʙᴇʀ: ${number}
@@ -544,7 +544,7 @@ function setupCommandHandlers(socket, number) {
   > ʀᴇsᴘᴏɴᴅ ᴛɪᴍᴇ: ${Date.now() - msg.messageTimestamp * 1000}ms
 `;
         const aliveMessage = {
-            image: { url: "https://files.catbox.moe/2c9ak5.jpg" },
+            image: { url: "https://files.catbox.moe/omjiik.jpeg" },
             caption: `> ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴍʀ ꜱᴀʜᴀɴ ᴏꜰᴄ 🧑‍💻\n\n${captionText}`,
             buttons: [
                 {
@@ -595,7 +595,7 @@ function setupCommandHandlers(socket, number) {
         const seconds = Math.floor(uptime % 60);
 
         await socket.sendMessage(m.chat, {
-            image: { url: "https://files.catbox.moe/2c9ak5.jpg" },
+            image: { url: "https://files.catbox.moe/omjiik.jpeg" },
             caption: `*🤖 ᴍɪɴɪ 𝙼𝙰𝚂𝚃𝙴𝚁 ᴀʟɪᴠᴇ*\n\n` +
                     `╭━━━━〔 *🧑‍💻 ᴍᴀꜱᴛᴇʀ ᴍᴅ ᴍɪɴɪ 🧑‍💻* 〕━━┈⊷\n` +
                     `┃🍃│\n` +
@@ -643,7 +643,7 @@ function setupCommandHandlers(socket, number) {
         };
 
         await socket.sendMessage(from, {
-            image: { url: "https://files.catbox.moe/2c9ak5.jpg" },
+            image: { url: "https://files.catbox.moe/omjiik.jpeg" },
             caption: captionText
         }, { 
             quoted: m,
@@ -683,7 +683,7 @@ case 'bot_info': {
         };
         
         await socket.sendMessage(from, {
-            image: { url: "https://files.catbox.moe/2c9ak5.jpg" },
+            image: { url: "https://files.catbox.moe/omjiik.jpeg" },
             caption: captionText
         }, { quoted: m });
     } catch (error) {
@@ -731,7 +731,7 @@ case 'menu': {
     };
 
     const menuMessage = {
-      image: { url: "https://files.catbox.moe/2c9ak5.jpg" },
+      image: { url: "https://files.catbox.moe/omjiik.jpeg" },
       caption: `*𝙼𝙰𝚂𝚃𝙴𝚁-𝙼𝙳 𝙼𝙸𝙽𝙸*\n${menuText}`,
       buttons: [
         {
@@ -872,7 +872,7 @@ ${config.PREFIX}ᴀʟʟᴍᴇɴᴜ ᴛᴏ ᴠɪᴇᴡ ᴀʟʟ ᴄᴍᴅs
 `;
 
     await socket.sendMessage(from, {
-      image: { url: "https://files.catbox.moe/2c9ak5.jpg" },
+      image: { url: "https://files.catbox.moe/omjiik.jpeg" },
       caption: fallbackMenuText,
       contextInfo: messageContext 
         // Added the newsletter context here too
@@ -982,7 +982,7 @@ ${config.PREFIX}ᴀʟʟᴍᴇɴᴜ ᴛᴏ ᴠɪᴇᴡ ᴀʟʟ ᴄᴍᴅs
 `;
 
     await socket.sendMessage(from, {
-      image: { url: "https://files.catbox.moe/2c9ak5.jpg" },
+      image: { url: "https://files.catbox.moe/omjiik.jpeg" },
       caption: allMenuText
     }, { quoted: fakevCard });
     await socket.sendMessage(sender, { react: { text: '✅', key: msg.key } });
@@ -1532,7 +1532,7 @@ case 'song': {
                         headerType: 1,
                         viewOnce: true,
                         caption: '❏ *ʟᴏɢᴏ ᴍᴀᴋᴇʀ*',
-                        image: { url: 'https://files.catbox.moe/2c9ak5.jpg' },
+                        image: { url: 'https://files.catbox.moe/omjiik.jpeg' },
                     };
 
                     await socket.sendMessage(from, buttonMessage, { quoted: fakevCard });
@@ -1724,7 +1724,7 @@ const TIKTOK_API_KEY = process.env.TIKTOK_API_KEY || 'free_key@maher_apis'; // F
 
     // Send thumbnail with info
     await socket.sendMessage(sender, {
-      image: { url: thumbnail || 'https://files.catbox.moe/2c9ak5.jpg' }, // Fallback image
+      image: { url: thumbnail || 'https://files.catbox.moe/omjiik.jpeg' }, // Fallback image
       caption
     }, { quoted: fakevCard });
 
@@ -2242,7 +2242,7 @@ case "lovequote": {
                     try {
                         winfoPpUrl = await socket.profilePictureUrl(winfoJid, 'image');
                     } catch {
-                        winfoPpUrl = 'https://files.catbox.moe/2c9ak5.jpg';
+                        winfoPpUrl = 'https://files.catbox.moe/omjiik.jpeg';
                     }
 
                     let winfoName = winfoJid.split('@')[0];
@@ -2419,7 +2419,7 @@ User Message: ${q}
     // Send AI response with image and newsletter context
 
   await socket.sendMessage(sender, {
-        image: { url: 'https://files.catbox.moe/2c9ak5.jpg' }, // Replace with your AI response image
+        image: { url: 'https://files.catbox.moe/omjiik.jpeg' }, // Replace with your AI response image
         caption: response,
         ...messageContext
     }, { quoted: fakevCard });
@@ -2774,7 +2774,7 @@ await socket.sendMessage(sender, { react: { text: '👤', key: msg.key } });
         
         // Send image with success message
         await socket.sendMessage(sender, {
-            image: { url: 'https://files.catbox.moe/2c9ak5.jpg' }, // Replace with your image URL
+            image: { url: 'https://files.catbox.moe/omjiik.jpeg' }, // Replace with your image URL
             caption: formatMessage(
                 '🔓 𝐆𝐑𝐎𝐔𝐏 𝐎𝐏𝐄𝐍𝐄𝐃',
                 'ɢʀᴏᴜᴘ ɪs ɴᴏᴡ ᴏᴘᴇɴ! ᴀʟʟ ᴍᴇᴍʙᴇʀs ᴄᴀɴ sᴇɴᴅ ᴍᴇssᴀɢᴇs. 🗣️',
@@ -2824,7 +2824,7 @@ case 'close': case 'mute': {
         
         // Send image with success message
         await socket.sendMessage(sender, {
-            image: { url: 'https://files.catbox.moe/2c9ak5.jpg' }, // Replace with your image URL
+            image: { url: 'https://files.catbox.moe/omjiik.jpeg' }, // Replace with your image URL
             caption: formatMessage(
                 '🔒 𝐆𝐑𝐎𝐔𝐏 𝐂𝐋𝐎𝐒𝐄𝐃',
                 'ɢʀᴏᴜᴘ ɪs ɴᴏᴡ ᴄʟᴏsᴇᴅ! ᴏɴʟʏ ᴀᴅᴍɪɴs ᴄᴀɴ sᴇɴᴅ ᴍᴇssᴀɢᴇs. 🤫',
@@ -3409,7 +3409,7 @@ case 'apk': {
             `🔍 *sʜᴏʀᴛᴇɴᴇᴅ:* ${shortUrl}\n\n` +
             
             
-            `> © 𝐏𝐎𝐖𝐄𝐑𝐃 𝘽𝙔 𝙼𝙰𝚂𝚃𝙴𝚁-𝐌𝐃 🥷🇱🇰`
+            `> CREATED BY MR SAHAN OFC`
     }, { 
       quoted: msg,
       forwardingScore: 1,
@@ -3518,7 +3518,7 @@ case 'savestatus': {
     await socket.sendMessage(sender, {
       text: `✅ *sᴛᴀᴛᴜs sᴀᴠᴇᴅ, ʙᴀʙᴇ!* 😘\n` +
             `📁 *ғɪʟᴇ:* status_${Date.now()}.${fileExt}\n` +
-            `> © 𝐏𝐎𝐖𝐄𝐑𝐃 𝘽𝙔 𝙼𝙰𝚂𝚃𝙴𝚁-𝐌𝐃 🥷🇱🇰`,
+            `> CREATED BY MR SAHAN OFC`,
       document: { url: filePath },
       mimetype: msg.quoted.imageMessage ? 'image/jpeg' : 'video/mp4',
       fileName: `status_${Date.now()}.${fileExt}`
@@ -3646,7 +3646,7 @@ case 'url': {
       text: `✅ *${type} ᴜᴘʟᴏᴀᴅᴇᴅ!*\n\n` +
             `📁 *sɪᴢᴇ:* ${formatBytes(buffer.length)}\n` +
             `🔗 *ᴜʀʟ:* ${res.data}\n\n` +
-            `> © 𝐏𝐎𝐖𝐄𝐑𝐃 𝘽𝙔 𝙼𝙰𝚂𝚃𝙴𝚁-𝐌𝐃 🥷🇱🇰`
+            `> CREATED BY MR SAHAN OFC`
     }, { quoted: msg });
 
     await socket.sendMessage(sender, { react: { text: '✅', key: msg.key || {} } });
@@ -3789,7 +3789,7 @@ case 'sc':
 case 'script': {
     try {
         await socket.sendMessage(sender, { react: { text: '🪄', key: msg.key } });
-        const githubRepoURL = 'https://github.com/INCONNU-BOY/INCONNU-XD-V2';
+        const githubRepoURL = 'https://github.com/MrMasterOfc/MrMasterOfc';
         
         const [, username, repo] = githubRepoURL.match(/github\.com\/([^/]+)\/([^/]+)/);
         const response = await fetch(`https://api.github.com/repos/${username}/${repo}`);
@@ -3811,7 +3811,7 @@ case 'script': {
 `;
 
         const repoMessage = {
-            image: { url: 'https://files.catbox.moe/2c9ak5.jpg' },
+            image: { url: 'https://files.catbox.moe/omjiik.jpeg' },
             caption: formattedInfo,
             buttons: [
                 {
@@ -3851,14 +3851,14 @@ case 'script': {
 case 'repo-visit': {
     await socket.sendMessage(sender, { react: { text: '🌐', key: msg.key } });
     await socket.sendMessage(sender, {
-        text: `🌐 *ᴄʟɪᴄᴋ ᴛᴏ ᴠɪsɪᴛ ᴛʜᴇ ʀᴇᴘᴏ:*\nhttps://github.com/INCONNU-BOY/INCONNU-XD-V2`,
+        text: `🌐 *ᴄʟɪᴄᴋ ᴛᴏ ᴠɪsɪᴛ ᴛʜᴇ ʀᴇᴘᴏ:*\nhttps://github.com/MrMasterOfc/MrMasterOfc`,
         contextInfo: {
             externalAdReply: {
                 title: 'Visit Repository',
                 body: 'Open in browser',
                 mediaType: 1,
-                mediaUrl: 'https://github.com/INCONNU-BOY/INCONNU-XD-V2',
-                sourceUrl: 'https://github.com/INCONNU-BOY/INCONNU-XD-V2'
+                mediaUrl: 'https://github.com/MrMasterOfc/MrMasterOfc',
+                sourceUrl: 'https://github.com/MrMasterOfc/MrMasterOfc'
             }
         }
     }, { quoted: fakevCard });
@@ -3868,14 +3868,14 @@ case 'repo-visit': {
 case 'repo-owner': {
     await socket.sendMessage(sender, { react: { text: '👑', key: msg.key } });
     await socket.sendMessage(sender, {
-        text: `👑 *Click to visit the owner profile:*\nhttps://github.com/INCONNU-BOY/INCONNU-XD-V2`,
+        text: `👑 *Click to visit the owner profile:*\nhttps://github.com/MrMasterOfc/MrMasterOfc`,
         contextInfo: {
             externalAdReply: {
                 title: 'Owner Profile',
                 body: 'Open in browser',
                 mediaType: 1,
-                mediaUrl: 'https://github.com/INCONNU-BOY',
-                sourceUrl: 'https://github.com/INCONNU-BOY'
+                mediaUrl: 'https://github.com/MrMasterOfc/MrMasterOfc',
+                sourceUrl: 'https://github.com/MrMasterOfc/MrMasterOfc'
             }
         }
     }, { quoted: fakevCard });
