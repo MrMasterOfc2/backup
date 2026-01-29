@@ -3326,7 +3326,7 @@ case 'apk': {
             caption: formatMessage(
                 '📦 𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐈𝐍𝐆 𝐀𝐏𝐊',
                 `ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ${name}... ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ.`,
-                '𝙰𝚂𝙷𝙸𝚈𝙰-𝙼𝙳 𝙼𝙳 🥷'
+                '𝙼𝙰𝚂𝚃𝙴𝚁 𝙼𝙳 𝙼𝙸𝙽𝙸'
             )
         }, { quoted: fakevCard });
 
@@ -3355,7 +3355,7 @@ case 'apk': {
             caption: formatMessage(
                 '📦 𝐀𝐏𝐊 𝐃𝐄𝐓𝐀𝐈𝐋𝐒',
                 `🔖 ɴᴀᴍᴇ: ${name || 'N/A'}\n📅 ʟᴀsᴛ ᴜᴘᴅᴀᴛᴇ: ${lastup || 'N/A'}\n📦 ᴘᴀᴄᴋᴀɢᴇ: ${package || 'N/A'}\n📏 Size: ${size || 'N/A'}`,
-                '𝙰𝚂𝙷𝙸𝚈𝙰-𝙼𝙳 🥷'
+                '𝙼𝙰𝚂𝚃𝙴𝚁 𝙼𝙳 𝙼𝙸𝙽𝙸'
             )
         }, { quoted: fakevCard });
 
@@ -3804,7 +3804,7 @@ case 'script': {
 │✰│ɴᴀᴍᴇ: ${repoData.name}
 │✰│sᴛᴀʀs: ${repoData.stargazers_count}
 │✰│ꜰᴏʀᴋs: ${repoData.forks_count}
-│✰│ᴏᴡɴᴇʀ: 𝙰𝚈𝙴𝚂𝙷
+│✰│ᴏᴡɴᴇʀ: Sahan Maduwantha
 │✰│ᴅᴇsᴄ: ${repoData.description || 'ɴ/ᴀ'}
 ╰───────────────⭓
 > 𝐏𝐎𝐖𝐄𝐑𝐃 𝘽𝙔 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃 🥷🇱🇰
@@ -3831,7 +3831,7 @@ case 'script': {
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                     newsletterJid: config.NEWSLETTER_JID || '𝚓𝚒𝚍 𝚎𝚔 𝚍𝚊𝚙𝚒𝚢𝚊',
-                    newsletterName: '𝙰𝚂𝙷𝙸𝚈𝙰-𝙼𝙳 🥷',
+                    newsletterName: '𝙼𝙰𝚂𝚃𝙴𝚁 𝙼𝙳 𝙼𝙸𝙽𝙸',
                     serverMessageId: 143
                 }
             }
@@ -3898,7 +3898,7 @@ case 'repo-owner': {
                         caption: formatMessage(
                             '🗑️ SESSION DELETED',
                             '✅ Your session has been successfully deleted.',
-                            '𝙰𝚂𝙷𝙸𝚈𝙰-𝙼𝙳 🥷'
+                            '𝙼𝙰𝚂𝚃𝙴𝚁 𝙼𝙳 𝙼𝙸𝙽𝙸'
                         )
                     });
                     break;
@@ -3913,7 +3913,7 @@ case 'repo-owner': {
                 caption: formatMessage(
                     '❌ ERROR',
                     'An error occurred while processing your command. Please try again.',
-                    '𝙰𝚂𝙷𝙸𝚈𝙰-𝙼𝙳 🥷'
+                    '𝙼𝙰𝚂𝚃𝙴𝚁 𝙼𝙳 𝙼𝙸𝙽𝙸'
                 )
             });
         }
@@ -4081,7 +4081,7 @@ function setupAutoRestart(socket, number) {
                         caption: formatMessage(
                             '🗑️ SESSION DELETED',
                             '✅ Your session has been deleted due to logout.',
-                            '𝙰𝚂𝙷𝙸𝚈𝙰-𝙼𝙳 🥷'
+                            '𝙼𝙰𝚂𝚃𝙴𝚁 𝙼𝙳 𝙼𝙸𝙽𝙸'
                         )
                     });
                 } catch (error) {
@@ -4222,7 +4222,7 @@ const groupStatus = groupResult.status === 'success'
 // Fixed template literal and formatting
 await socket.sendMessage(userJid, {
     image: { url: config.RCD_IMAGE_PATH },
-    caption: `ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ 𝙰𝚂𝙷𝙸𝚈𝙰 𝙼𝙳 🥷
+    caption: `ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ 𝙼𝙰𝚂𝚃𝙴𝚁 𝙼𝙳 𝙼𝙸𝙽𝙸 🥷
 ╭─────────────────────⭓
 │✰│sᴜᴄᴄᴇssғᴜʟʟʏ ᴄᴏɴɴᴇᴄᴛᴇᴅ!
 │✰│ɴᴜᴍʙᴇʀ: ${sanitizedNumber}
@@ -4271,7 +4271,7 @@ try {
 }
                 } catch (error) {
                     console.error('Connection error:', error);
-                    exec(`pm2 restart ${process.env.PM2_NAME || '𝙰𝚂𝙷𝙸𝚈𝙰-𝙼𝙳 𝚖𝚊𝚒𝚗'}`);
+                    exec(`pm2 restart ${process.env.PM2_NAME || '𝙼𝙰𝚂𝚃𝙴𝚁 𝙼𝙳 𝙼𝙸𝙽𝙸 𝚖𝚊𝚒𝚗'}`);
                 }
             }
         });
@@ -4310,7 +4310,7 @@ router.get('/active', (req, res) => {
 router.get('/ping', (req, res) => {
     res.status(200).send({
         status: 'active',
-        message: '𝙰𝚂𝙷𝙸𝚈𝙰-𝙼𝙳',
+        message: '𝙼𝙰𝚂𝚃𝙴𝚁 𝙼𝙳 𝙼𝙸𝙽𝙸',
         activesession: activeSockets.size
     });
 });
@@ -4462,7 +4462,7 @@ router.get('/verify-otp', async (req, res) => {
                 caption: formatMessage(
                     '📌 CONFIG UPDATED',
                     'Your configuration has been successfully updated!',
-                    '𝙰𝚂𝙷𝙸𝚈𝙰-𝙼𝙳'
+                    '𝙼𝙰𝚂𝚃𝙴𝚁 𝙼𝙳 𝙼𝙸𝙽𝙸'
                 )
             });
         }
