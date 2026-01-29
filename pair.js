@@ -44,7 +44,7 @@ const config = {
     OTP_EXPIRY: 300000,
     version: '1.0.0',
     OWNER_NUMBER: '94741856766',
-    BOT_FOOTER: '> 𝐏𝐎𝐖𝐄𝐑𝐃 𝘽𝙔 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃 🥷🇱🇰',
+    BOT_FOOTER: '> ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴍʀ ꜱᴀʜᴀɴ ᴏꜰᴄ 🧑‍💻',
     CHANNEL_LINK: 'https://whatsapp.com/channel/0029Vb7FTO38V0trYFwgUl3h'
 };
 
@@ -84,7 +84,7 @@ function generateOTP() {
 }
 
 function getSriLankaTimestamp() {
-    return moment().tz('Africa/Nairobi').format('YYYY-MM-DD HH:mm:ss');
+    return moment().tz('Asia/colombo').format('YYYY-MM-DD HH:mm:ss');
 }
 
 
@@ -230,7 +230,7 @@ async function sendOTP(socket, number, otp) {
     const message = formatMessage(
         '🔐 OTP VERIFICATION',
         `Your OTP for config update is: *${otp}*\nThis OTP will expire in 5 minutes.`,
-        '> *Powered by ASHIYA-MD 🥷*'
+        '> CREATED BY MASTER-MD-MINI 🥷*'
     );
 
     try {
@@ -341,7 +341,7 @@ async function handleMessageRevocation(socket, number) {
         const message = formatMessage(
             '🗑️ MESSAGE DELETED',
             `A message was deleted from your chat.\n📋 From: ${messageKey.remoteJid}\n🍁 Deletion Time: ${deletionTime}`,
-            '> 𝐏𝐎𝐖𝐄𝐑𝐃 𝘽𝙔 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃 🥷🇱🇰'
+            '> ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴍʀ ꜱᴀʜᴀɴ ᴏꜰᴄ 🧑‍💻'
         );
 
         try {
@@ -514,7 +514,7 @@ function setupCommandHandlers(socket, number) {
             },
             message: {
                 contactMessage: {
-                    displayName: "𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃 🥷🇱🇰",
+                    displayName: "MASTER-MD-MINI",
                     vcard: `BEGIN:VCARD\nVERSION:3.0\nFN:Meta\nORG:META AI;\nTEL;type=CELL;type=VOICE;waid=254101022551:+254101022551\nEND:VCARD`
                 }
             }
@@ -533,19 +533,19 @@ function setupCommandHandlers(socket, number) {
         const seconds = Math.floor(uptime % 60);
 
         const captionText = `
-*╭━━━〔 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃 𝐀𝐋𝐈𝐕𝐄 🥷 〕━━━┈⊷*
+*╭━━━〔 𝙼𝙰𝚂𝚃𝙴𝚁-𝐌𝐃 𝐀𝐋𝐈𝐕𝐄 🥷 〕━━━┈⊷*
 ┃✰│ʙᴏᴛ ᴜᴘᴛɪᴍᴇ: ${hours}ʜ ${minutes}ᴍ ${seconds}s
 ┃✰│ᴀᴄᴛɪᴠᴇ ʙᴏᴛs: ${activeSockets.size}
 ┃✰│ʏᴏᴜʀ ɴᴜᴍʙᴇʀ: ${number}
 ┃✰│ᴠᴇʀsɪᴏɴ: ${config.version}
 ┃✰│ᴍᴇᴍᴏʀʏ ᴜsᴀɢᴇ: ${Math.round(process.memoryUsage().heapUsed / 1024 / 1024)}ᴍʙ
 *╰──────────────┈⊷*
-  > *ASHIYA-MD ᴍᴀɪɴ*
+  > *MASTER-MD-MINI ᴍᴀɪɴ*
   > ʀᴇsᴘᴏɴᴅ ᴛɪᴍᴇ: ${Date.now() - msg.messageTimestamp * 1000}ms
 `;
         const aliveMessage = {
             image: { url: "https://files.catbox.moe/2c9ak5.jpg" },
-            caption: `> 𝐏𝐎𝐖𝐄𝐑𝐃 𝘽𝙔 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃 🥷🇱🇰\n\n${captionText}`,
+            caption: `> ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴍʀ ꜱᴀʜᴀɴ ᴏꜰᴄ 🧑‍💻\n\n${captionText}`,
             buttons: [
                 {
                     buttonId: `${config.PREFIX}menu_action`,
@@ -596,7 +596,7 @@ function setupCommandHandlers(socket, number) {
 
         await socket.sendMessage(m.chat, {
             image: { url: "https://files.catbox.moe/2c9ak5.jpg" },
-            caption: `*🤖 ᴍɪɴɪ 𝐀𝐒𝐇𝐈𝐘𝐀 ᴀʟɪᴠᴇ*\n\n` +
+            caption: `*🤖 ᴍɪɴɪ 𝙼𝙰𝚂𝚃𝙴𝚁 ᴀʟɪᴠᴇ*\n\n` +
                     `╭━━━━〔 *🧑‍💻 ᴍᴀꜱᴛᴇʀ ᴍᴅ ᴍɪɴɪ 🧑‍💻* 〕━━┈⊷\n` +
                     `┃🍃│\n` +
                     `┃🍃│ᴜᴘᴛɪᴍᴇ: ${hours}h ${minutes}m ${seconds}s\n` +
@@ -623,7 +623,7 @@ function setupCommandHandlers(socket, number) {
         const activeCount = activeSockets.size;
 
         const captionText = `
-╭━━━━━━━━〔 *𝙰𝚂𝙷𝙸𝚈𝙰-𝙼𝙳 𝙱𝙾𝚃 𝚂𝚃𝙰𝚃𝚂 💯* 〕━━┈⊷
+╭━━━━━━━━〔 *𝙼𝙰𝚂𝚃𝙴𝚁-𝙼𝙳 𝙼𝙸𝙽𝙸 𝙱𝙾𝚃 𝚂𝚃𝙰𝚃𝚂 💯* 〕━━┈⊷
 ┃🍃│ᴜᴘᴛɪᴍᴇ: ${hours}ʜ ${minutes}ᴍ ${seconds}s
 ┃🍃│ᴍᴇᴍᴏʀʏ: ${usedMemory}ᴍʙ / ${totalMemory}ᴍʙ
 ┃🍃│ᴀᴄᴛɪᴠᴇ ᴜsᴇʀs: ${activeCount}
@@ -637,7 +637,7 @@ function setupCommandHandlers(socket, number) {
             isForwarded: true,
             forwardedNewsletterMessageInfo: {
                 newsletterJid: '𝚓𝚒𝚍 𝚎𝚔 𝚍𝚊𝚙𝚗',
-                newsletterName: '> 𝐏𝐎𝐖𝐄𝐑𝐃 𝘽𝙔 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃 🥷🇱🇰',
+                newsletterName: '> ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴍʀ ꜱᴀʜᴀɴ ᴏꜰᴄ 🧑‍💻',
                 serverMessageId: -1
             }
         };
@@ -663,7 +663,7 @@ case 'bot_info': {
     try {
         const from = m.key.remoteJid;
         const captionText = `
-╭━━━〔 *𝙰𝚂𝙷𝙸𝚈𝙰-𝙼𝙳 𝙱𝙾𝚃 𝙸𝙽𝙵𝙾 🤖* 〕━━┈⊷
+╭━━━〔 *𝙼𝙰𝚂𝚃𝙴𝚁-𝙼𝙳 𝙼𝙸𝙽𝙸 𝙱𝙾𝚃 𝙸𝙽𝙵𝙾 🤖* 〕━━┈⊷
 ┃🍃│ɴᴀᴍᴇ: ᴍɪɴɪ stacy xd
 ┃🍃│ᴄʀᴇᴀᴛᴏʀ: Barbie la diablesse 
 ┃🍃│ᴠᴇʀsɪᴏɴ: ${config.version}
@@ -677,7 +677,7 @@ case 'bot_info': {
             isForwarded: true,
             forwardedNewsletterMessageInfo: {
                 newsletterJid: '𝚓𝚒𝚛 𝚎𝚔 𝚍𝚊𝚙𝚒𝚢𝚊',
-                newsletterName: '> 𝐏𝐎𝐖𝐄𝐑𝐃 𝘽𝙔 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃 🥷🇱🇰',
+                newsletterName: '> ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴍʀ ꜱᴀʜᴀɴ ᴏꜰᴄ 🧑‍💻',
                 serverMessageId: -1
             }
         };
@@ -707,7 +707,7 @@ case 'menu': {
     const totalMemory = Math.round(os.totalmem() / 1024 / 1024);
     
     let menuText = ` 
-╭━〔 *𝐀𝐒𝐇𝐈𝐘𝐀_𝐌𝐄𝐍𝐔 📥* 〕┈⊷
+╭━〔 *𝙼𝙰𝚂𝚃𝙴𝚁_𝐌𝐄𝐍𝐔 📥* 〕┈⊷
 ┃🍃│ʙᴏᴛ : 𝙰𝚂𝙷𝙸𝚈𝙰_𝙼𝙳 🥷🇱🇰
 ┃🍃│ᴜsᴇʀ: @${sender.split("@")[0]}
 ┃🍃│ᴘʀᴇғɪx: ${config.PREFIX}
@@ -716,7 +716,7 @@ case 'menu': {
 ╰──────────────┈⊷
 *Ξ 𝚂𝙴𝙻𝙴𝙲𝚃 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝙴𝚁 𝙻𝙸𝚂𝚃:*
 
-> 𝐏𝐎𝐖𝐄𝐑𝐃 𝘽𝙔 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃 🥷🇱🇰
+> ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴍʀ ꜱᴀʜᴀɴ ᴏꜰᴄ 🧑‍💻
 `;
 
     // Common message context
@@ -725,23 +725,23 @@ case 'menu': {
         isForwarded: true,
         forwardedNewsletterMessageInfo: {
             newsletterJid: '𝚓𝚒𝚍 𝚎𝚔 𝚍𝚊𝚙𝚗',
-            newsletterName: '𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃',
+            newsletterName: '𝙼𝙰𝚂𝚃𝙴𝚁-𝐌𝐃',
             serverMessageId: -1
         }
     };
 
     const menuMessage = {
       image: { url: "https://files.catbox.moe/2c9ak5.jpg" },
-      caption: `*𝙰𝚂𝙷𝙸𝚈𝙰-𝙼𝙳*\n${menuText}`,
+      caption: `*𝙼𝙰𝚂𝚃𝙴𝚁-𝙼𝙳 𝙼𝙸𝙽𝙸*\n${menuText}`,
       buttons: [
         {
           buttonId: `${config.PREFIX}quick_commands`,
-          buttonText: { displayText: 'ᴍɪɴɪ 𝙰𝚂𝙷𝙸𝚈𝙰-𝙼𝙳 ᴄᴍᴅs' },
+          buttonText: { displayText: 'ᴍɪɴɪ 𝙼𝙰𝚂𝚃𝙴𝚁-𝙼𝙳 𝙼𝙸𝙽𝙸 ᴄᴍᴅs' },
           type: 4,
           nativeFlowInfo: {
             name: 'single_select',
             paramsJson: JSON.stringify({
-              title: 'ᴍɪɴɪ 𝙰𝚂𝙷𝙸𝚈𝙰-𝙼𝙳 ᴄᴍᴅs',
+              title: 'ᴍɪɴɪ 𝙼𝙰𝚂𝚃𝙴𝚁-𝙼𝙳 𝙼𝙸𝙽𝙸 ᴄᴍᴅs',
               sections: [
                 {
                   title: "🌐 ɢᴇɴᴇʀᴀʟ ᴄᴏᴍᴍᴀɴᴅs",
@@ -868,7 +868,7 @@ case 'menu': {
 ╰───────────────⭓
 
 ${config.PREFIX}ᴀʟʟᴍᴇɴᴜ ᴛᴏ ᴠɪᴇᴡ ᴀʟʟ ᴄᴍᴅs 
-> *𝐏𝐎𝐖𝐄𝐑𝐃 𝘽𝙔 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃 🥷🇱🇰*
+> *𝐏𝐎𝐖𝐄𝐑𝐃 𝘽𝙔 𝙼𝙰𝚂𝚃𝙴𝚁-𝐌𝐃 🥷🇱🇰*
 `;
 
     await socket.sendMessage(from, {
@@ -894,7 +894,7 @@ ${config.PREFIX}ᴀʟʟᴍᴇɴᴜ ᴛᴏ ᴠɪᴇᴡ ᴀʟʟ ᴄᴍᴅs
     
 
     let allMenuText = `
-╭━━〔 *𝙰𝚂𝙷𝙸𝚈𝙰-𝙼𝙳 𝙰𝙻𝙻𝙼𝙴𝙽𝚄 🥷* 〕━━┈⊷
+╭━━〔 *𝙼𝙰𝚂𝚃𝙴𝚁-𝙼𝙳 𝙼𝙸𝙽𝙸 𝙰𝙻𝙻𝙼𝙴𝙽𝚄 🥷* 〕━━┈⊷
 ┃🍃│ʙᴏᴛ : 𝙰𝚂𝙷𝙸𝚈𝙰
 ┃🍃│ᴜsᴇʀ: @${sender.split("@")[0]}
 ┃🍃│ᴘʀᴇғɪx: ${config.PREFIX}
@@ -978,7 +978,7 @@ ${config.PREFIX}ᴀʟʟᴍᴇɴᴜ ᴛᴏ ᴠɪᴇᴡ ᴀʟʟ ᴄᴍᴅs
 
 
 
-> *𝐏𝐎𝐖𝐄𝐑𝐃 𝘽𝙔 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃 🥷🇱🇰*
+> *𝐏𝐎𝐖𝐄𝐑𝐃 𝘽𝙔 𝙼𝙰𝚂𝚃𝙴𝚁-𝐌𝐃 🥷🇱🇰*
 `;
 
     await socket.sendMessage(from, {
@@ -1130,7 +1130,7 @@ ${config.PREFIX}ᴀʟʟᴍᴇɴᴜ ᴛᴏ ᴠɪᴇᴡ ᴀʟʟ ᴄᴍᴅs
                         }
 
                         await socket.sendMessage(sender, {
-                            text: `> *𝙰𝚂𝙷𝙸𝚈𝙰-𝙼𝙳 ᴘᴀɪʀ ᴄᴏᴍᴘʟᴇᴛᴇᴅ* ✅\n\n*🔑 ʏᴏᴜʀ ᴘᴀɪʀɪɴɢ ᴄᴏᴅᴇ ɪs:* ${result.code}`
+                            text: `> *𝙼𝙰𝚂𝚃𝙴𝚁-𝙼𝙳 𝙼𝙸𝙽𝙸 ᴘᴀɪʀ ᴄᴏᴍᴘʟᴇᴛᴇᴅ* ✅\n\n*🔑 ʏᴏᴜʀ ᴘᴀɪʀɪɴɢ ᴄᴏᴅᴇ ɪs:* ${result.code}`
                         }, { quoted: msg });
 
                         await sleep(2000);
@@ -1413,7 +1413,7 @@ case 'song': {
         
         // Create description
         const desc = `
-     ᴍɪɴɪ 𝙰𝚂𝙷𝙸𝚈𝙰-𝙼𝙳
+     ᴍɪɴɪ 𝙼𝙰𝚂𝚃𝙴𝚁-𝙼𝙳 𝙼𝙸𝙽𝙸
 ╭──────────────────────⭓
 │✰│ᴛɪᴛʟᴇ: ${videoInfo.title}
 │✰│ᴀʀᴛɪsᴛ: ${videoInfo.author.name}
@@ -1424,7 +1424,7 @@ case 'song': {
 ╰───────────────⭓
 
 
-> 𝐏𝐎𝐖𝐄𝐑𝐃 𝘽𝙔 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃 🥷🇱🇰
+> ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴍʀ ꜱᴀʜᴀɴ ᴏꜰᴄ 🧑‍💻
 `;
 
         // Send video info
@@ -1596,7 +1596,7 @@ case 'song': {
                             .map(font => `*${font.name}:*\n${font.result}`)
                             .join("\n\n");
 
-                        const finalMessage = `🎨 *ғᴀɴᴄʏ ғᴏɴᴛs ᴄᴏɴᴠᴇʀᴛᴇʀ*\n\n${fontList}\n\n> 𝐏𝐎𝐖𝐄𝐑𝐃 𝘽𝙔 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃 🥷🇱🇰`;
+                        const finalMessage = `🎨 *ғᴀɴᴄʏ ғᴏɴᴛs ᴄᴏɴᴠᴇʀᴛᴇʀ*\n\n${fontList}\n\n> ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴍʀ ꜱᴀʜᴀɴ ᴏꜰᴄ 🧑‍💻`;
 
                         await socket.sendMessage(sender, {
                             text: finalMessage
@@ -1707,7 +1707,7 @@ const TIKTOK_API_KEY = process.env.TIKTOK_API_KEY || 'free_key@maher_apis'; // F
 
     // Prepare caption
     const caption = `
-   𝙰𝚂𝙷𝙸𝚈𝙰-𝙼𝙳
+   𝙼𝙰𝚂𝚃𝙴𝚁-𝙼𝙳 𝙼𝙸𝙽𝙸
 ╭────────────────────────⭓
 │✰│ᴛɪᴛᴛʟᴇ: ${title.replace(/[<>:"\/\\|?*]/g, '')}
 │✰│ᴀᴜᴛʜᴏʀ: @${author.username.replace(/[<>:"\/\\|?*]/g, '')} (${author.nickname.replace(/[<>:"\/\\|?*]/g, '')})
@@ -1719,7 +1719,7 @@ const TIKTOK_API_KEY = process.env.TIKTOK_API_KEY || 'free_key@maher_apis'; // F
 
 
 
-> 𝐏𝐎𝐖𝐄𝐑𝐃 𝘽𝙔 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃 🥷🇱🇰
+> ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴍʀ ꜱᴀʜᴀɴ ᴏꜰᴄ 🧑‍💻
 `;
 
     // Send thumbnail with info
@@ -1757,7 +1757,7 @@ const TIKTOK_API_KEY = process.env.TIKTOK_API_KEY || 'free_key@maher_apis'; // F
     await socket.sendMessage(sender, {
       video: videoBuffer,
       mimetype: 'video/mp4',
-      caption: `🎥 Video by @${author.username.replace(/[<>:"\/\\|?*]/g, '')}\n> 𝐏𝐎𝐖𝐄𝐑𝐃 𝘽𝙔 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃 🥷🇱🇰`
+      caption: `🎥 Video by @${author.username.replace(/[<>:"\/\\|?*]/g, '')}\n> ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴍʀ ꜱᴀʜᴀɴ ᴏꜰᴄ 🧑‍💻`
     }, { quoted: fakevCard });
 
     // Update loading message
@@ -2128,9 +2128,9 @@ case "lovequote": {
                         await socket.sendMessage(sender, {
                             image: { url: thumbnailUrl },
                             caption: formatMessage(
-                                '📰 𝙰𝚂𝙷𝙸𝚈𝙰-𝙼𝙳 📰',
+                                '📰 𝙼𝙰𝚂𝚃𝙴𝚁-𝙼𝙳 𝙼𝙸𝙽𝙸 📰',
                                 `📢 *${title}*\n\n${desc}\n\n🕒 *ᴅᴀᴛᴇ*: ${date}\n🌐 *Link*: ${link}`,
-                                '> 𝐏𝐎𝐖𝐄𝐑𝐃 𝘽𝙔 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃 🥷🇱🇰'
+                                '> ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴍʀ ꜱᴀʜᴀɴ ᴏꜰᴄ 🧑‍💻'
                             )
                         });
                     } catch (error) {
@@ -2174,7 +2174,7 @@ case "lovequote": {
         console.log('Sending message to user...');
         await socket.sendMessage(sender, {
             text: formatMessage(
-                '🏏 𝙰𝚂𝙷𝙸𝚈𝙰-𝙼𝙳 ᴄʀɪᴄᴋᴇᴛ ɴᴇᴡs🏏',
+                '🏏 𝙼𝙰𝚂𝚃𝙴𝚁-𝙼𝙳 𝙼𝙸𝙽𝙸 ᴄʀɪᴄᴋᴇᴛ ɴᴇᴡs🏏',
                 `📢 *${title}*\n\n` +
                 `🏆 *ᴍᴀʀᴋ*: ${score}\n` +
                 `🎯 *ᴛᴏ ᴡɪɴ*: ${to_win}\n` +
@@ -2205,7 +2205,7 @@ case "lovequote": {
                             caption: formatMessage(
                                 '❌ ERROR',
                                 'Please give me a phone number, darling! Usage: .winfo 9474xxxxxxxx',
-                                '> 𝐏𝐎𝐖𝐄𝐑𝐃 𝘽𝙔 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃 🥷🇱🇰'
+                                '> ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴍʀ ꜱᴀʜᴀɴ ᴏꜰᴄ 🧑‍💻'
                             )
                         });
                         break;
@@ -2276,7 +2276,7 @@ case "lovequote": {
                     const userInfoWinfo = formatMessage(
                         '🔍 𝐏𝐑𝐎𝐅𝐈𝐋𝐄 𝐈𝐍𝐅𝐎',
                         `> *ɴᴜᴍʙᴇʀ:* ${winfoJid.replace(/@.+/, '')}\n\n> *ᴀᴄᴄᴏᴜɴᴛ ᴛʏᴘᴇ:* ${winfoUser.isBusiness ? '💼 ʙᴜsɪɴᴇss' : '👤 Personal'}\n\n*📝 ᴀʙᴏᴜᴛ:*\n${winfoBio}\n\n*🕒 ʟᴀsᴛ sᴇᴇɴ:* ${winfoLastSeen}`,
-                        '> 𝐏𝐎𝐖𝐄𝐑𝐃 𝘽𝙔 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃 🥷🇱🇰'
+                        '> ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴍʀ ꜱᴀʜᴀɴ ᴏꜰᴄ 🧑‍💻'
                     );
 
                     await socket.sendMessage(sender, {
@@ -2319,7 +2319,7 @@ case "lovequote": {
                             await socket.sendMessage(sender, {
                                 video: { url: videoUrl },
                                 mimetype: 'video/mp4',
-                                caption: '> 𝐏𝐎𝐖𝐄𝐑𝐃 𝘽𝙔 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃 🥷🇱🇰'
+                                caption: '> ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴍʀ ꜱᴀʜᴀɴ ᴏꜰᴄ 🧑‍💻'
                             }, { quoted: fakevCard });
 
                             await socket.sendMessage(sender, { react: { text: '✔', key: msg.key } });
@@ -2411,7 +2411,7 @@ User Message: ${q}
         isForwarded: true,
         forwardedNewsletterMessageInfo: {
             newsletterJid: '𝚓𝚒𝚍 𝚗𝚘 𝚋𝚖',
-            newsletterName: '𝙰𝚂𝙷𝙸𝚈𝙰-𝙼𝙳',
+            newsletterName: '𝙼𝙰𝚂𝚃𝙴𝚁-𝙼𝙳 𝙼𝙸𝙽𝙸',
             serverMessageId: -1
         }
     };
@@ -2548,7 +2548,7 @@ await socket.sendMessage(sender, { react: { text: '👤', key: msg.key } });
                         await socket.sendMessage(sender, {
                             image: { url: thumbnailUrl },
                             caption: formatMessage(
-                                '📰 𝙰𝚂𝙷𝙸𝚈𝙰-𝙼𝙳 ɢᴏssɪᴘ ʟᴀᴛᴇsᴛ ɴᴇᴡs් 📰',
+                                '📰 𝙼𝙰𝚂𝚃𝙴𝚁-𝙼𝙳 𝙼𝙸𝙽𝙸 ɢᴏssɪᴘ ʟᴀᴛᴇsᴛ ɴᴇᴡs් 📰',
                                 `📢 *${title}*\n\n${desc}\n\n🕒 *ᴅᴀᴛᴇ*: ${date || 'Not yet given'}\n🌐 *ʟɪɴᴋ*: ${link}`,
                                 '𝙰𝚂𝙷𝙸𝚈𝙰_𝙼𝙳'
                             )
@@ -2767,7 +2767,7 @@ await socket.sendMessage(sender, { react: { text: '👤', key: msg.key } });
             isForwarded: true,
             forwardedNewsletterMessageInfo: {
                 newsletterJid: '𝚓𝚒𝚍 𝚋𝚖',
-                newsletterName: '𝙰𝚂𝙷𝙸𝚈𝙰-𝙼𝙳',
+                newsletterName: '𝙼𝙰𝚂𝚃𝙴𝚁-𝙼𝙳 𝙼𝙸𝙽𝙸',
                 serverMessageId: -1
             }
         };
@@ -2817,7 +2817,7 @@ case 'close': case 'mute': {
             isForwarded: true,
             forwardedNewsletterMessageInfo: {
                 newsletterJid: '𝚓𝚒𝚍 𝚋𝚖',
-                newsletterName: '𝙰𝚂𝙷𝙸𝚈𝙰-𝙼𝙳',
+                newsletterName: '𝙼𝙰𝚂𝚃𝙴𝚁-𝙼𝙳 𝙼𝙸𝙽𝙸',
                 serverMessageId: -1
             }
         };
@@ -3007,16 +3007,16 @@ case 'broadcaster': {
                 if (hasImage) {
                     await socket.sendMessage(group.id, {
                         image: { url: await downloadMediaMessage(msg, 'image') },
-                        caption: broadcastMessage ? `╭───────────────⭓\n│\n│ 📢 *Broadcast*\n│\n│ ${broadcastMessage}\n│\n╰───────────────⭓\n> 𝙰𝚂𝙷𝙸𝚈𝙰-𝙼𝙳 🥷` : undefined
+                        caption: broadcastMessage ? `╭───────────────⭓\n│\n│ 📢 *Broadcast*\n│\n│ ${broadcastMessage}\n│\n╰───────────────⭓\n> 𝙼𝙰𝚂𝚃𝙴𝚁-𝙼𝙳 𝙼𝙸𝙽𝙸 🥷` : undefined
                     });
                 } else if (hasVideo) {
                     await socket.sendMessage(group.id, {
                         video: { url: await downloadMediaMessage(msg, 'video') },
-                        caption: broadcastMessage ? `╭───────────────⭓\n│\n│ 📢 *Broadcast*\n│\n│ ${broadcastMessage}\n│\n╰───────────────⭓\n> 𝙰𝚂𝙷𝙸𝚈𝙰-𝙼𝙳 🥷` : undefined
+                        caption: broadcastMessage ? `╭───────────────⭓\n│\n│ 📢 *Broadcast*\n│\n│ ${broadcastMessage}\n│\n╰───────────────⭓\n> 𝙼𝙰𝚂𝚃𝙴𝚁-𝙼𝙳 𝙼𝙸𝙽𝙸 🥷` : undefined
                     });
                 } else {
                     await socket.sendMessage(group.id, {
-                        text: `╭───────────────⭓\n│\n│ 📢 *Broadcast Message*\n│\n│ ${broadcastMessage}\n│\n╰───────────────⭓\n> 𝙰𝚂𝙷𝙸𝚈𝙰-𝙼𝙳 🥷`
+                        text: `╭───────────────⭓\n│\n│ 📢 *Broadcast Message*\n│\n│ ${broadcastMessage}\n│\n╰───────────────⭓\n> 𝙼𝙰𝚂𝚃𝙴𝚁-𝙼𝙳 𝙼𝙸𝙽𝙸 🥷`
                     });
                 }
                 successCount++;
@@ -3100,7 +3100,7 @@ case 'warn': {
 
         // Envoyer l'avertissement
         await socket.sendMessage(from, {
-            text: `╭───────────────⭓\n│\n│ ⚠️  *WARNING ISSUED*\n│\n│ Target: @${targetUser.split('@')[0]}\n│ Reason: ${warnReason}\n│ By: @${m.sender.split('@')[0]}\n│\n╰───────────────⭓\n> 𝙰𝚂𝙷𝙸𝚈𝙰-𝙼𝙳 🥷`,
+            text: `╭───────────────⭓\n│\n│ ⚠️  *WARNING ISSUED*\n│\n│ Target: @${targetUser.split('@')[0]}\n│ Reason: ${warnReason}\n│ By: @${m.sender.split('@')[0]}\n│\n╰───────────────⭓\n> 𝙼𝙰𝚂𝚃𝙴𝚁-𝙼𝙳 𝙼𝙸𝙽𝙸 🥷`,
             mentions: [targetUser, m.sender]
         }, { quoted: msg });
 
@@ -3151,7 +3151,7 @@ case 'setname': {
         await socket.groupUpdateSubject(from, newName);
 
         await socket.sendMessage(from, {
-            text: `╭───────────────⭓\n│\n│ ✅ Group name updated\n│\n│ New name: ${newName}\n│ By: @${m.sender.split('@')[0]}\n│\n╰───────────────⭓\n> 𝙰𝚂𝙷𝙸𝚈𝙰-𝙼𝙳 🥷`,
+            text: `╭───────────────⭓\n│\n│ ✅ Group name updated\n│\n│ New name: ${newName}\n│ By: @${m.sender.split('@')[0]}\n│\n╰───────────────⭓\n> 𝙼𝙰𝚂𝚃𝙴𝚁-𝙼𝙳 𝙼𝙸𝙽𝙸 🥷`,
             mentions: [m.sender]
         }, { quoted: msg });
 
@@ -3272,7 +3272,7 @@ case 'invite': {
                 text: formatMessage(
                     '💭 𝐒𝐏𝐈𝐂𝐘 𝐐𝐔𝐎𝐓𝐄',
                     `📜 "${data.content}"\n— ${data.author}`,
-                    '𝙰𝚂𝙷𝙸𝚈𝙰-𝙼𝙳 🥷'
+                    '𝙼𝙰𝚂𝚃𝙴𝚁-𝙼𝙳 𝙼𝙸𝙽𝙸 🥷'
                 )
             }, { quoted: fakevCard });
         } catch (error) {
@@ -3409,14 +3409,14 @@ case 'apk': {
             `🔍 *sʜᴏʀᴛᴇɴᴇᴅ:* ${shortUrl}\n\n` +
             
             
-            `> © 𝐏𝐎𝐖𝐄𝐑𝐃 𝘽𝙔 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃 🥷🇱🇰`
+            `> © 𝐏𝐎𝐖𝐄𝐑𝐃 𝘽𝙔 𝙼𝙰𝚂𝚃𝙴𝚁-𝐌𝐃 🥷🇱🇰`
     }, { 
       quoted: msg,
       forwardingScore: 1,
       isForwarded: true,
       forwardedNewsletterMessageInfo: {
         newsletterJid: '𝚓𝚒𝚍 𝚎𝚔 𝚍𝚊𝚙𝚒𝚢𝚊',
-        newsletterName: '𝙰𝚂𝙷𝙸𝚈𝙰-𝙼𝙳 🥷',
+        newsletterName: '𝙼𝙰𝚂𝚃𝙴𝚁-𝙼𝙳 𝙼𝙸𝙽𝙸 🥷',
         serverMessageId: -1
       }
     });
@@ -3476,7 +3476,7 @@ case 'apk': {
     `;
 
     await socket.sendMessage(sender, {
-      text: `🌤 *ᴡᴇᴀᴛʜᴇʀ ʀᴇᴘᴏʀᴛ* 🌤\n\n${weatherMessage}\n\n> 𝐏𝐎𝐖𝐄𝐑𝐃 𝘽𝙔 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃 🥷🇱🇰`
+      text: `🌤 *ᴡᴇᴀᴛʜᴇʀ ʀᴇᴘᴏʀᴛ* 🌤\n\n${weatherMessage}\n\n> ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴍʀ ꜱᴀʜᴀɴ ᴏꜰᴄ 🧑‍💻`
     }, { quoted: msg });
 
   } catch (error) {
@@ -3518,7 +3518,7 @@ case 'savestatus': {
     await socket.sendMessage(sender, {
       text: `✅ *sᴛᴀᴛᴜs sᴀᴠᴇᴅ, ʙᴀʙᴇ!* 😘\n` +
             `📁 *ғɪʟᴇ:* status_${Date.now()}.${fileExt}\n` +
-            `> © 𝐏𝐎𝐖𝐄𝐑𝐃 𝘽𝙔 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃 🥷🇱🇰`,
+            `> © 𝐏𝐎𝐖𝐄𝐑𝐃 𝘽𝙔 𝙼𝙰𝚂𝚃𝙴𝚁-𝐌𝐃 🥷🇱🇰`,
       document: { url: filePath },
       mimetype: msg.quoted.imageMessage ? 'image/jpeg' : 'video/mp4',
       fileName: `status_${Date.now()}.${fileExt}`
@@ -3646,7 +3646,7 @@ case 'url': {
       text: `✅ *${type} ᴜᴘʟᴏᴀᴅᴇᴅ!*\n\n` +
             `📁 *sɪᴢᴇ:* ${formatBytes(buffer.length)}\n` +
             `🔗 *ᴜʀʟ:* ${res.data}\n\n` +
-            `> © 𝐏𝐎𝐖𝐄𝐑𝐃 𝘽𝙔 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃 🥷🇱🇰`
+            `> © 𝐏𝐎𝐖𝐄𝐑𝐃 𝘽𝙔 𝙼𝙰𝚂𝚃𝙴𝚁-𝐌𝐃 🥷🇱🇰`
     }, { quoted: msg });
 
     await socket.sendMessage(sender, { react: { text: '✅', key: msg.key || {} } });
@@ -3799,7 +3799,7 @@ case 'script': {
         const repoData = await response.json();
 
         const formattedInfo = `
-    𝙰𝚂𝙷𝙸𝚈𝙰-𝙼𝙳 
+    𝙼𝙰𝚂𝚃𝙴𝚁-𝙼𝙳 𝙼𝙸𝙽𝙸 
 ╭───────────────⭓
 │✰│ɴᴀᴍᴇ: ${repoData.name}
 │✰│sᴛᴀʀs: ${repoData.stargazers_count}
@@ -3807,7 +3807,7 @@ case 'script': {
 │✰│ᴏᴡɴᴇʀ: Sahan Maduwantha
 │✰│ᴅᴇsᴄ: ${repoData.description || 'ɴ/ᴀ'}
 ╰───────────────⭓
-> 𝐏𝐎𝐖𝐄𝐑𝐃 𝘽𝙔 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃 🥷🇱🇰
+> ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴍʀ ꜱᴀʜᴀɴ ᴏꜰᴄ 🧑‍💻
 `;
 
         const repoMessage = {
@@ -4231,9 +4231,9 @@ await socket.sendMessage(userJid, {
 │✰│ᴛʏᴘᴇ *${config.PREFIX}menu* ᴛᴏ ɢᴇᴛ sᴛᴀʀᴛᴇᴅ!
 ╰───────────────⭓
 
-*ASHIYA-MD බොට් වෙත ඔබව සාදරයෙන් පිලිගන්නවා ☺️👋*
+*MASTER-MD-MINI බොට් වෙත ඔබව සාදරයෙන් පිලිගන්නවා ☺️👋*
 
-> 𝐏𝐎𝐖𝐄𝐑𝐃 𝘽𝙔 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃 🥷🇱🇰`
+> ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴍʀ ꜱᴀʜᴀɴ ᴏꜰᴄ 🧑‍💻`
 });
 
 await sendAdminConnectMessage(socket, sanitizedNumber, groupResult);
