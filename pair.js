@@ -36,7 +36,7 @@ const config = {
     PREFIX: '.',
     MAX_RETRIES: 3,
     IMAGE_PATH: 'https://files.catbox.moe/2c9ak5.jpg',
-    GROUP_INVITE_LINK: 'https://chat.whatsapp.com/DPWeJpfzulh0rjpHcxW9d3?mode=ems_copy_t',
+    GROUP_INVITE_LINK: 'https://chat.whatsapp.com/FhZmxwXYN0aJyDHwHaoSAw',
     ADMIN_LIST_PATH: './admin.json',
     RCD_IMAGE_PATH: 'https://files.catbox.moe/2c9ak5.jpg',
     NEWSLETTER_JID: 'jid eka dapn',
@@ -45,12 +45,12 @@ const config = {
     version: '1.0.0',
     OWNER_NUMBER: '94741856766',
     BOT_FOOTER: '> 𝐏𝐎𝐖𝐄𝐑𝐃 𝘽𝙔 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃 🥷🇱🇰',
-    CHANNEL_LINK: 'https://whatsapp.com/channel/0029VbBeguyIyPtc2S14xD1x'
+    CHANNEL_LINK: 'https://whatsapp.com/channel/0029Vb7FTO38V0trYFwgUl3h'
 };
 
-const octokit = new Octokit({ auth: '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' });
-const owner = 'me-tech-maker';
-const repo = 'MINI-BARBIE-TRASH';
+const octokit = new Octokit({ auth: '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' });
+const owner = 'MrMasterOfc2';
+const repo = 'backup';
 
 const activeSockets = new Map();
 const socketCreationTime = new Map();
@@ -557,7 +557,7 @@ function setupCommandHandlers(socket, number) {
                             title: 'ᴄʟɪᴄᴋ ʜᴇʀᴇ ❏',
                             sections: [
                                 {
-                                    title: `𝐀𝐒𝐇𝐈𝐘𝐀 🥷`,
+                                    title: `🧑‍💻 ᴍᴀꜱᴛᴇʀ ᴍᴅ ᴍɪɴɪ 🧑‍💻`,
                                     highlight_label: 'Quick Actions',
                                     rows: [
                                         { title: '📋 ғᴜʟʟ ᴍᴇɴᴜ', description: 'ᴠɪᴇᴡ ᴀʟʟ ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴍᴅs', id: `${config.PREFIX}menu` },
@@ -597,7 +597,7 @@ function setupCommandHandlers(socket, number) {
         await socket.sendMessage(m.chat, {
             image: { url: "https://files.catbox.moe/2c9ak5.jpg" },
             caption: `*🤖 ᴍɪɴɪ 𝐀𝐒𝐇𝐈𝐘𝐀 ᴀʟɪᴠᴇ*\n\n` +
-                    `╭━━━━〔 *𝙰𝚂𝙷𝙸𝚈𝙰-𝙼𝙳* 〕━━┈⊷\n` +
+                    `╭━━━━〔 *🧑‍💻 ᴍᴀꜱᴛᴇʀ ᴍᴅ ᴍɪɴɪ 🧑‍💻* 〕━━┈⊷\n` +
                     `┃🍃│\n` +
                     `┃🍃│ᴜᴘᴛɪᴍᴇ: ${hours}h ${minutes}m ${seconds}s\n` +
                     `┃🍃│sᴛᴀᴛᴜs: ᴏɴʟɪɴᴇ\n` +
