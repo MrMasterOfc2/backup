@@ -12,7 +12,6 @@
     "express": "^4.18.2",
     "fs-extra": "^11.2.0",
     "pino": "^9.7.0",
-    "canvas": "latest",
     "jimp": "^0.16.1",
     "form-data": "latest",
     "@ffmpeg-installer/ffmpeg": "^1.1.0",
@@ -35,7 +34,7 @@
     "moment-timezone": "^0.6.0"
   },
   "engines": {
-    "node": ">=18.x"
+    "node": "18.x"
   },
   "keywords": [
     "whatsapp",
@@ -44,6 +43,6 @@
     "baileys",
     "ashiya"
   ],
-  "author": "ayesh themiya",
+  "author": "Sahan Maduwantha",
   "license": "MIT"
 }
