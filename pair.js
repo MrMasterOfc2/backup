@@ -582,48 +582,61 @@ function setupCommandHandlers(socket, number) {
 
 
 
-
-                    
-                    
-                      // ==================== NEW FEATURES START ====================
-                
-                case 'autostatus': {
-                    try {
-                        await socket.sendMessage(sender, { react: { text: '📱', key: msg.key } });
-                        
-                        const statusFeatures = config.STATUS_FEATURES || {
-                            auto_view: config.AUTO_VIEW_STATUS === true || config.AUTO_VIEW_STATUS === 'true',
-                            auto_like: config.AUTO_LIKE_STATUS === true || config.AUTO_LIKE_STATUS === 'true',
-                            auto_recording: config.AUTO_RECORDING === true || config.AUTO_RECORDING === 'true'
-                        };
-                        
-                        let responseText = `📱 *AUTO STATUS SETTINGS*\n\n`;
-                        responseText += `👁️ Auto View Status: ${statusFeatures.auto_view ? '✅ ON' : '❌ OFF'}\n`;
-                        responseText += `❤️ Auto Like Status: ${statusFeatures.auto_like ? '✅ ON' : '❌ OFF'}\n`;
-                        responseText += `🎤 Auto Recording: ${statusFeatures.auto_recording ? '✅ ON' : '❌ OFF'}\n\n`;
-                        responseText += `📌 *Usage:*\n`;
-                        responseText += `• ${config.PREFIX}autoview on/off\n`;
-                        responseText += `• ${config.PREFIX}autolike on/off\n`;
-                        responseText += `• ${config.PREFIX}autorecord on/off\n`;
-                        responseText += `• ${config.PREFIX}allstatus on/off\n\n`;
-                        responseText += `> Powered by ASHIYA-MD 🥷🇱🇰`;
-                        
+    case 'autoview': {
+                    if (!isOwner) {
                         await socket.sendMessage(sender, {
-                            text: responseText
+                            text: '❌ Only bot owner can change auto status settings!'
                         }, { quoted: fakevCard });
-                        
-                    } catch (error) {
-                        console.error('Autostatus command error:', error);
-                        await socket.sendMessage(sender, {
-                            text: '❌ Failed to fetch auto status settings'
-                        }, { quoted: fakevCard });
+                        break;
                     }
+                    
+                    const action = args[0]?.toLowerCase();
+                    if (!action || !['on', 'off', 'true', 'false'].includes(action)) {
+                        await socket.sendMessage(sender, {
+                            text: `📌 Usage: ${config.PREFIX}autoview on/off`
+                        }, { quoted: fakevCard });
+                        break;
+                    }
+                    
+                    const isEnabled = action === 'on' || action === 'true';
+                    config.STATUS_FEATURES.auto_view = isEnabled;
+                    config.AUTO_VIEW_STATUS = isEnabled;
+                    
+                    await socket.sendMessage(sender, {
+                        text: `✅ Auto View Status ${isEnabled ? 'ENABLED' : 'DISABLED'}`
+                    }, { quoted: fakevCard });
                     break;
                 }
 
+                case 'autolike': {
+                    if (!isOwner) {
+                        await socket.sendMessage(sender, {
+                            text: '❌ Only bot owner can change auto status settings!'
+                        }, { quoted: fakevCard });
+                        break;
+                    }
+                    
+                    const action = args[0]?.toLowerCase();
+                    if (!action || !['on', 'off', 'true', 'false'].includes(action)) {
+                        await socket.sendMessage(sender, {
+                            text: `📌 Usage: ${config.PREFIX}autolike on/off`
+                        }, { quoted: fakevCard });
+                        break;
+                    }
+                    
+                    const isEnabled = action === 'on' || action === 'true';
+                    config.STATUS_FEATURES.auto_like = isEnabled;
+                    config.AUTO_LIKE_STATUS = isEnabled;
+                    
+                    await socket.sendMessage(sender, {
+                        text: `✅ Auto Like Status ${isEnabled ? 'ENABLED' : 'DISABLED'}`
+                    }, { quoted: fakevCard });
+                    break;
+                }
 
-
-
+                    
+                    
+ 
 
                     
 
