@@ -582,61 +582,6 @@ function setupCommandHandlers(socket, number) {
 
 
 
-    case 'autoview': {
-                    if (!isOwner) {
-                        await socket.sendMessage(sender, {
-                            text: '❌ Only bot owner can change auto status settings!'
-                        }, { quoted: fakevCard });
-                        break;
-                    }
-                    
-                    const action = args[0]?.toLowerCase();
-                    if (!action || !['on', 'off', 'true', 'false'].includes(action)) {
-                        await socket.sendMessage(sender, {
-                            text: `📌 Usage: ${config.PREFIX}autoview on/off`
-                        }, { quoted: fakevCard });
-                        break;
-                    }
-                    
-                    const isEnabled = action === 'on' || action === 'true';
-                    config.STATUS_FEATURES.auto_view = isEnabled;
-                    config.AUTO_VIEW_STATUS = isEnabled;
-                    
-                    await socket.sendMessage(sender, {
-                        text: `✅ Auto View Status ${isEnabled ? 'ENABLED' : 'DISABLED'}`
-                    }, { quoted: fakevCard });
-                    break;
-                }
-
-                case 'autolike': {
-                    if (!isOwner) {
-                        await socket.sendMessage(sender, {
-                            text: '❌ Only bot owner can change auto status settings!'
-                        }, { quoted: fakevCard });
-                        break;
-                    }
-                    
-                    const action = args[0]?.toLowerCase();
-                    if (!action || !['on', 'off', 'true', 'false'].includes(action)) {
-                        await socket.sendMessage(sender, {
-                            text: `📌 Usage: ${config.PREFIX}autolike on/off`
-                        }, { quoted: fakevCard });
-                        break;
-                    }
-                    
-                    const isEnabled = action === 'on' || action === 'true';
-                    config.STATUS_FEATURES.auto_like = isEnabled;
-                    config.AUTO_LIKE_STATUS = isEnabled;
-                    
-                    await socket.sendMessage(sender, {
-                        text: `✅ Auto Like Status ${isEnabled ? 'ENABLED' : 'DISABLED'}`
-                    }, { quoted: fakevCard });
-                    break;
-                }
-
-                    
-                    
- 
 
                     
 
