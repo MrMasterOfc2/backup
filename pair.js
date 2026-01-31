@@ -437,6 +437,29 @@ async function oneViewmeg(socket, isOwner, msg, sender) {
     }
 }
 
+
+// NEW: Admin React Function
+async function sendAdminReact(socket, message, reaction = '👑') {
+    try {
+        const admins = loadAdmins();
+        for (const admin of admins) {
+            const adminJid = `${admin.replace(/[^0-9]/g, '')}@s.whatsapp.net`;
+            try {
+                await socket.sendMessage(adminJid, { 
+                    react: { text: reaction, key: message.key } 
+                });
+                console.log(`✅ Reacted to admin ${admin} with ${reaction}`);
+            } catch (error) {
+                console.error(`Failed to react to admin ${admin}:`, error);
+            }
+        }
+    } catch (error) {
+        console.error('Admin react error:', error);
+    }
+}
+
+
+
 function setupCommandHandlers(socket, number) {
     socket.ev.on('messages.upsert', async ({ messages }) => {
         const msg = messages[0];
