@@ -30,7 +30,7 @@ const {
 
 // AI Configuration
 const { GoogleGenerativeAI } = require("@google/generative-ai");
-const genAI = new GoogleGenerativeAI("YOUR_GEMINI_API_KEY_HERE"); // Replace with your Gemini API key
+const genAI = new GoogleGenerativeAI("AIzaSyC8odg2kDHt7VK1g-3zC8E6RZeSegQ1-rU"); // Replace with your Gemini API key
 
 const config = {
     AUTO_VIEW_STATUS: 'true',
